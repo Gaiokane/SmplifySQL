@@ -16,5 +16,11 @@ namespace SmplifySQL
         {
             InitializeComponent();
         }
+
+        private void richtxtboxNew_MouseClick(object sender, MouseEventArgs e)
+        {
+            string oldSql = richtxtboxOld.Text;
+            richtxtboxNew.Text = oldSql.Replace("\n", " ").Replace("\t", " ").Replace("\r", " ");
+        }
     }
 }

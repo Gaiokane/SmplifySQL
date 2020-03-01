@@ -28,13 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.richtxtboxOld = new System.Windows.Forms.RichTextBox();
+            this.richtxtboxNew = new System.Windows.Forms.RichTextBox();
+            this.SuspendLayout();
+            // 
+            // richtxtboxOld
+            // 
+            this.richtxtboxOld.Location = new System.Drawing.Point(12, 12);
+            this.richtxtboxOld.Name = "richtxtboxOld";
+            this.richtxtboxOld.Size = new System.Drawing.Size(776, 210);
+            this.richtxtboxOld.TabIndex = 0;
+            this.richtxtboxOld.Text = "";
+            // 
+            // richtxtboxNew
+            // 
+            this.richtxtboxNew.Location = new System.Drawing.Point(12, 228);
+            this.richtxtboxNew.Name = "richtxtboxNew";
+            this.richtxtboxNew.Size = new System.Drawing.Size(776, 210);
+            this.richtxtboxNew.TabIndex = 1;
+            this.richtxtboxNew.Text = "";
+            this.richtxtboxNew.MouseClick += new System.Windows.Forms.MouseEventHandler(this.richtxtboxNew_MouseClick);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.richtxtboxNew);
+            this.Controls.Add(this.richtxtboxOld);
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "简化SQL";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.RichTextBox richtxtboxOld;
+        private System.Windows.Forms.RichTextBox richtxtboxNew;
     }
 }
 
